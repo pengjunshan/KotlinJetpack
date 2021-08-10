@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import
+            alias="student"
+            type="com.example.kotlinjetpack.databindingviewmodellivedata.Student" />
+
+        <variable
+            name="listData"
+            type="java.util.ArrayList&lt;student>" />
+
+        <variable
+            name="data"
+            type="com.example.kotlinjetpack.databindingviewmodellivedata.StudentViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".databindingviewmodellivedata.DataViewLiveActivity">
+
+        <Button
+            android:id="@+id/addTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="添加数据66"
+            android:onClick="@{()->data.addStudentList()}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></Button>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:bindData="@{listData}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addTV" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
