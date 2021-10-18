@@ -6,7 +6,7 @@ import java.io.File
  * @Copyright: 杭州柯林电气股份有限公司版权所有
  * @Author: PengJunShan
  * @Date: 2021/6/7 15:39:39
- * @Describe:
+ * @Describe:标准库函数
  */
 class `4StandardFun` {
 }

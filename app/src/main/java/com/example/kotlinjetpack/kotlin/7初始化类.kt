@@ -4,7 +4,7 @@ package com.example.kotlinjetpack.kotlin
  * @Copyright: 杭州柯林电气股份有限公司版权所有
  * @Author: PengJunShan
  * @Date: 2021/6/25 11:29:29
- * @Describe:初始化
+ * @Describe:初始化类
  */
 
 fun main() {

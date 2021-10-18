@@ -49,6 +49,20 @@ fun main() {
     Nesting().getName("外部类调")
     Nesting.InerNesting().getName("内部类调")
 
+    // 数据data类 默认toString方法
+    println(classStudent("小明",19))//classStudent(name=小明, age=19)
+    println(classStudent("小明",19)===classStudent("小明",19))
+
+    // copy类 使用
+    val copy1 = classCopy("小明")
+    val copy2 = copy1.copy("baby")
+    println(copy1)
+    println(copy2)
+
+    // 解构声明
+    var (n,a) =classCopy("小明",18)
+    println("name:${n} age:${a}")
+
 }
 
 /**
@@ -108,4 +122,25 @@ class Nesting{
     fun getName(name:String){
         InerNesting().getName(name)
     }
+}
+
+
+/**
+ * 数据类
+ * 数据类,是专门设计用来存储数据的类，数据类提供了toString的个性化实现，==符号默认情况下，比较对象就是比较它们的引用值，数据类提供了equals和hashCode的个性化实现
+ */
+data class classStudent(var name:String,var age:Int)
+
+/**
+ * copy类
+ */
+data class classCopy(var name:String,var age:Int){
+    constructor(name:String):this(name,18){
+    }
+}
+
+/**
+ * 解构声明
+ */
+data class decosClass(var name:String,var age:Int){
 }

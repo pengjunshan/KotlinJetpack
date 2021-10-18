@@ -14,8 +14,7 @@ import java.util.*
  * @Date: 2021/4/20 10:38:38
  * @Describe:
  */
-class StudentAdapter(datas: ArrayList<Student>?) :
-    RecyclerView.Adapter<StudentAdapter.StudentViewHolder?>() {
+class StudentAdapter(datas: ArrayList<Student>?) : RecyclerView.Adapter<StudentAdapter.StudentViewHolder?>() {
     private var mList: List<Student>? = ArrayList()
 
     init {
